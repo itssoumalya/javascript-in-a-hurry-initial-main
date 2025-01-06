@@ -20,7 +20,19 @@ function celciusToFahr(temperature) {
 let temperature = 49;
 // alert(`The temperature outside is ${celciusToFahr(temperature)}`);
 
-const greetingText = "Good morning!";
+let currentHour = new Date().getHours();
+let greetingText;
+
+if (currentHour < 12) {
+  greetingText = "Good morning!";
+} else if (currentHour < 19) {
+  greetingText = "Good afternoon!";
+} else if (currentHour < 24) {
+  greetingText = "Good evening!";
+} else {
+  greetingText = "Welcome!";
+}
+
 const weatherCondition = "cloudy";
 const userLocation = "Kolkata";
 
